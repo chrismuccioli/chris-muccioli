@@ -13,6 +13,17 @@
   margin-bottom: -0.6rem;
 }
 
+.caps {
+  text-transform: uppercase;
+}
+
+.right-align {
+  text-align: right;
+}
+.left-align {
+  text-align: left;
+}
+
 .clearfix {
   &:before, &:after { content: " "; display: table; }
   &:after { clear: both; }
@@ -50,3 +61,8 @@
 .bg-cover { background-size: cover; }
 .bg-contain { background-size: contain; }
 .bg-center { background-position: center center; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+}

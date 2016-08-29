@@ -47,13 +47,13 @@
 .image-set { padding-top: 2*$space; padding-bottom: 2*$space; }
 
 
-@media screen and (max-width: $breakpoint-sm) {
-  .clear-padding {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .clear-padding-top {
-    padding-top: 0 !important;
-  }
-  .m-px2 { padding-right: $space; padding-left: $space; }
-}
+// @media screen and (max-width: $breakpoint-sm) {
+//   .clear-padding {
+//     padding-left: 0 !important;
+//     padding-right: 0 !important;
+//   }
+//   .clear-padding-top {
+//     padding-top: 0 !important;
+//   }
+//   .m-px2 { padding-right: $space; padding-left: $space; }
+// }

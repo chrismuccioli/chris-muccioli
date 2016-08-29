@@ -39,23 +39,30 @@ $form-field-padding-x: .5rem !default;
 
 // Typography
 
-$font-family: 'Helvetica Neue', Helvetica, sans-serif !default;
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $line-height: 1.5 !default;
 $heading-font-family: $font-family !default;
-$heading-font-weight: bold !default;
+$heading-font-weight: 100 !default;
 $heading-line-height: 1.25 !default;
 $monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
-$h1: 2rem !default;
-$h2: 1.5rem !default;
-$h3: 1.25rem !default;
-$h4: 1rem !default;
-$h5: .875rem !default;
-$h6: .75rem !default;
+$monospace-letter-spacing: .15em !default;
+$h1: 32px !default;
+$h2: 24px !default;
+$h3: 18px !default;
+$h4: 16px !default;
+$h5: 12px !default;
+$h6: 10px !default;
 $bold-font-weight: bold !default;
 $space-1: .5rem !default;
 $space-2: 1rem !default;
 $space-3: 2rem !default;
 $space-4: 4rem !default;
+$h1-ls: 0px !default;
+$h2-ls: 0.06em !default;
+$h3-ls: 0px !default;
+$h4-ls: 0.12em !default;
+$h5-ls: 0px !default;
+$h6-ls: .06em !default;
 
 
 // Grid System

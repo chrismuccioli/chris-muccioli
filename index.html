@@ -1,23 +1,83 @@
-<!-- ---
-layout: default
 ---
- -->
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <link href="/css/style.css" rel="stylesheet" />
-    </head>
+title: "Chris Muccioli"
+---
+
+{% include head.html %}
+
     <body>
-      <div class="container">
-        <div class="row bg-red">
-          <div class="col sm-col-12 lg-col-12 md-col-12">
-            <h1 class="red bg-blue py6">Test</h1>
-            <h1 class="red">Test</h1>
-            <button>Test</button>
+
+      {% include _nav-bar.html %}
+
+      <div class="clearfix content">
+          <div class="row intro">
+            <div class="col sm-col-12 lg-col-8 ">
+              <div class="center-content">
+                <h1 class="pb4"><span class="intro-button">Chris Muccioli</span> is a multi-disciplinary designer working in Brooklyn, NY.</h1>
+                <h2><span class="bold">Currently accepting new clients.</span>He is a co-founded and the record club <span class="intro-button">Singles Club</span>. Previously he’s worked with the fine folks at <span class="intro-button">Jukely</span>, <span class="intro-button">Kickstarter</span>, <span class="intro-button">160over90</span>, & <span class="intro-button">Post Typography</span>.</h2>
+              </div>
+            </div>
           </div>
-        </div>
+          <!--Project Start-->
+              <div class="row project">
+                <div class="col col-12">
+                  <img src="images/project-image.png" class="fill pb2">
+                <div class="project-description">
+                  <div class="col lg-col-1 sm-col-6">
+                    <h6 class="mono-bold caps ">Project</h6>
+                  </div>
+                  <div class="col lg-col-3 sm-col-6">
+                    <h4>Singles Club</h4>
+                  </div>
+                  <div class="col lg-col-1 sm-col-6  role-headline">
+                    <h6 class="mono-bold caps">Role</h6>
+                  </div>
+                  <div class="col lg-col-4 sm-col-6 role-content">
+                    <h4>Creative Direction, Photography, Product Design, Print Design, Branding</h4>
+                  </div>
+                  <div class="col lg-col-3 sm-col-12">
+                      <div class="flag-button">
+                        <div class="flag-image">
+                          <h6 class="mono caps ">View full Project</h6>
+                        </div>
+                        <div class="flag-button-icon">
+                          <svg style="left: 0;" width="88px" height="15px" viewBox="1223 1274 88 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1224.000000, 1275.000000)" stroke-linecap="square">
+                                  <path d="M0.5,6.5 L84.5238037,6.5" id="Line" stroke="#FFFFFF"></path>
+                                  <path d="M85.5,6.5 L79.9773195,0.977319492" id="Line" stroke="#FFFFFF"></path>
+                                  <path d="M85.5,12.5 L79.9773195,6.97731949" id="Line" stroke="#FFFFFF" transform="translate(82.500000, 9.500000) scale(1, -1) translate(-82.500000, -9.500000) "></path>
+                              </g>
+                          </svg>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+          <!--Project End-->
+          <!--Project Start-->
+              <div class="row project">
+                <div class="col col-12">
+                  <img src="images/project-image.png" class="fill pb2">
+                  <div class="col lg-col-1 sm-col-6">
+                    <h6 class="mono-bold caps">Project</h6>
+                  </div>
+                  <div class="col lg-col-3 sm-col-6">
+                    <h4>Singles Club</h4>
+                  </div>
+                  <div class="col lg-col-1 sm-col-6">
+                    <h6 class="mono-bold caps">Role</h6>
+                  </div>
+                  <div class="col lg-col-4 sm-col-6">
+                    <h4>Creative Direction, Photography, Product Design, Print Design, Branding</h4>
+                  </div>
+                  <div class="col lg-col-3 sm-col-12 bg-red">
+                    <button>test</button>
+                  </div>
+                </div>
+              </div>
+          <!--Project End-->
       </div>
+
     </body>
 
 </html>

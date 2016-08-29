@@ -1,8 +1,14 @@
+@charset "UTF-8";
 /* Basscss Grid */
 .container {
   max-width: 64em;
   margin-left: auto;
   margin-right: auto; }
+
+.row {
+  float: left;
+  box-sizing: border-box;
+  width: 100%; }
 
 .col {
   float: left;
@@ -92,7 +98,7 @@
 
   .sm-col-12 {
     width: 100%; } }
-@media screen and (max-width: 52em) {
+@media screen and (min-width: 52em) {
   .md-col {
     float: left;
     box-sizing: border-box; }
@@ -136,7 +142,7 @@
 
   .md-col-12 {
     width: 100%; } }
-@media screen and (max-width: 64em) {
+@media screen and (min-width: 64em) {
   .lg-col {
     float: left;
     box-sizing: border-box; }
@@ -202,7 +208,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 0; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-size: 100%; }
 
@@ -212,15 +218,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: bold;
-  line-height: 1.25; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility; }
 
 p,
 dl,
 ol,
 ul {
-  font-size: 1rem;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 1rem; }
 
@@ -252,36 +259,49 @@ blockquote {
 
 blockquote,
 blockquote p {
-  font-size: 1.25rem;
+  font-size: 18px;
   font-style: italic; }
 
 h1,
 .h1 {
-  font-size: 2rem; }
+  font-size: 32px;
+  letter-spacing: 0px; }
 
 h2,
 .h2 {
-  font-size: 1.5rem; }
+  font-size: 24px;
+  letter-spacing: 0.06em; }
 
 h3,
 .h3 {
-  font-size: 1.25rem; }
+  font-size: 18px;
+  letter-spacing: 0px; }
 
 h4,
 .h4 {
-  font-size: 1rem; }
+  font-size: 16px;
+  letter-spacing: 0.12em; }
 
 h5,
 .h5 {
-  font-size: 0.875rem; }
+  font-size: 12px;
+  letter-spacing: 0px; }
 
 h6,
 .h6 {
-  font-size: 0.75rem; }
+  font-size: 10px;
+  letter-spacing: 0.06em; }
 
 .list-reset {
   list-style: none;
   padding-left: 0; }
+
+.mono {
+  font-family: "Source Code Pro", Consolas, monospace;
+  letter-spacing: 0.15em; }
+
+.bold {
+  font-weight: 300; }
 
 .m0 {
   margin: 0; }
@@ -478,17 +498,6 @@ h6,
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
-@media screen and (max-width: 40em) {
-  .clear-padding {
-    padding-left: 0 !important;
-    padding-right: 0 !important; }
-
-  .clear-padding-top {
-    padding-top: 0 !important; }
-
-  .m-px2 {
-    padding-right: 1rem;
-    padding-left: 1rem; } }
 .inline {
   display: inline; }
 
@@ -512,6 +521,15 @@ h6,
 
 .flush {
   margin-bottom: -0.6rem; }
+
+.caps {
+  text-transform: uppercase; }
+
+.right-align {
+  text-align: right; }
+
+.left-align {
+  text-align: left; }
 
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -554,6 +572,10 @@ h6,
 
 .bg-center {
   background-position: center center; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
 
 /* Basscss Base Forms */
 input,
@@ -611,7 +633,7 @@ textarea {
   transition: box-shadow .2s ease;
   border-style: solid;
   border-width: 1px;
-  border-color: #cccccc;
+  border-color: #ccc;
   border-radius: 0; }
 
 .field-light:focus {
@@ -621,19 +643,19 @@ textarea {
 
 .field-light:disabled {
   color: #e2e2e2;
-  background-color: dimgrey; }
+  background-color: dimgray; }
 
 .field-light:read-only:not(select) {
-  background-color: dimgrey; }
+  background-color: dimgray; }
 
 .field-light:invalid {
   border-color: #ff0022; }
 
 .field-light.is-success {
-  border-color: #3df0a7; }
+  border-color: #3DF0A7; }
 
 .field-light.is-warning {
-  border-color: #f9b432; }
+  border-color: #F9B432; }
 
 .field-light.is-error {
   border-color: #ff0022; }
@@ -706,14 +728,195 @@ textarea {
   /* Should be unset in IE9+ I think. */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
 
-body {
-  background: #000000; }
+.mono {
+  font-weight: 400;
+  font-family: "Cousine", monospace; }
 
+.mono-bold {
+  font-family: "Cousine", monospace;
+  font-weight: 700 !important;
+  letter-spacing: .15em;
+  padding-top: 4px; }
+
+body {
+  background: #000000;
+  color: #ffffff; }
+
+.top-nav {
+  padding-top: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+  position: fixed;
+  top: 0; }
+  .top-nav li {
+    display: inline;
+    list-style-type: none;
+    padding-left: 5px; }
+
+.bottom-nav {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0; }
+  .bottom-nav li {
+    display: inline;
+    list-style-type: none; }
+
+.intro-button {
+  background-color: #5c00ff;
+  padding: 6px 10px 6px 10px; }
+
+.project-intro {
+  padding-top: 300px;
+  padding-bottom: 300px; }
+
+.content {
+  padding-left: 10%;
+  padding-right: 10%; }
+
+.project {
+  padding-bottom: 10%; }
+
+.project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split {
+  padding-bottom: 100px;
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+.project-image-left img {
+  width: 50%;
+  height: 100%; }
+.project-image-left .caption {
+  padding-left: 5%;
+  padding-right: 10%;
+  padding-top: 0;
+  width: 33.33333%;
+  float: right; }
+  .project-image-left .caption h6 {
+    padding-top: 0px;
+    padding-bottom: 20px; }
+
+.project-image-right img {
+  width: 50%;
+  height: 100%;
+  float: right; }
+.project-image-right .caption {
+  padding-right: 10%;
+  padding-top: 0;
+  width: 33.33333%; }
+  .project-image-right .caption h6 {
+    padding-top: 0px;
+    padding-bottom: 20px; }
+
+.project-image-full img {
+  width: 100%;
+  height: 100%; }
+.project-image-full .caption {
+  width: 50%; }
+  .project-image-full .caption h6 {
+    padding-top: 20px; }
+  .project-image-full .caption h4 {
+    padding-top: 10px; }
+
+.caption-right {
+  padding-left: 50%; }
+
+.caption h6 {
+  font-weight: 400;
+  font-family: "Cousine", monospace;
+  text-transform: uppercase; }
+
+@media screen and (max-width: 40em) {
+  .caption {
+    padding-left: 5%; }
+
+  .project-image-left img, .project-image-right img {
+    width: 100%; }
+  .project-image-left .caption, .project-image-right .caption {
+    float: right;
+    width: 70%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 0; }
+    .project-image-left .caption h6, .project-image-right .caption h6 {
+      padding-top: 20px;
+      padding-bottom: 10px; }
+
+  .project-image-full .caption {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%; }
+    .project-image-full .caption h6 {
+      padding-top: 20px; }
+    .project-image-full .caption h4 {
+      padding-top: 10px;
+      width: 100%; }
+
+  .caption-right {
+    padding-left: 0;
+    padding-right: 20px; } }
+@media screen and (max-width: 40em) {
+  .content {
+    padding-left: 0;
+    padding-right: 0; }
+
+  .project-description {
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  .role-headline, .role-content, .project-headline, .project-content {
+    padding-top: 20px !important; }
+
+  .flag-button {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+
+  .intro {
+    padding-left: 20px;
+    padding-right: 20px; } }
+@media screen and (min-width: 64em) {
+  .flag-button {
+    float: right; } }
+/**
+ * VH and VW units can cause issues on iOS devices: http://caniuse.com/#feat=viewport-units
+ *
+ * To overcome this, create media queries that target the width, height, and orientation of iOS devices.
+ * It isn't optimal, but there is really no other way to solve the problem. In this example, I am fixing
+ * the height of element `.foo` —which is a full width and height cover image.
+ *
+ * iOS Resolution Quick Reference: http://www.iosres.com/
+ */
+.intro {
+  padding-top: 25vh;
+  padding-bottom: 25vh; }
+
+/**
+ * iPad with portrait orientation.
+*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .intro {
+    padding-top: 256px;
+    padding-bottom: 256px; } }
+/**
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  .intro {
+    padding-top: 192px;
+    padding-bottom: 192px; } }
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40 / 71) {
+  .intro {
+    padding-top: 125px;
+    padding-bottom: 125px; } }
 .white {
-  color: white; }
+  color: #ffffff; }
 
 .black {
-  color: black; }
+  color: #000000; }
 
 .light-gray {
   color: #f0f0f0; }
@@ -734,28 +937,28 @@ body {
   color: #ff0022; }
 
 .green {
-  color: #3df0a7; }
+  color: #3DF0A7; }
 
 .yellow {
-  color: #f9b432; }
+  color: #F9B432; }
 
 .orange {
   color: #ff3000; }
 
 .peach {
-  color: #ff9a85; }
+  color: #FF9A85; }
 
 .cream {
-  color: #ebceb7; }
+  color: #EBCEB7; }
 
 .gray-1 {
-  color: #e8e8e8; }
+  color: #E8E8E8; }
 
 .gray-2 {
-  color: #3e3432; }
+  color: #3E3432; }
 
 .gray-3 {
-  color: #261f1e; }
+  color: #261F1E; }
 
 .bg-dark-gray {
   background-color: #111111; }
@@ -773,40 +976,40 @@ body {
   background-color: #3b00cc; }
 
 .bg-green {
-  background-color: #3df0a7; }
+  background-color: #3DF0A7; }
 
 .bg-yellow {
-  background-color: #f9b432; }
+  background-color: #F9B432; }
 
 .bg-red {
   background-color: #ff0022; }
 
 .bg-peach {
-  background-color: #ff9a85; }
+  background-color: #FF9A85; }
 
 .bg-cream {
-  background-color: #ebceb7; }
+  background-color: #EBCEB7; }
 
 .bg-orange {
   background-color: #ff3000; }
 
 .bg-black {
-  background-color: black; }
+  background-color: #000000; }
 
 .bg-off-black {
   background-color: #111111; }
 
 .bg-off-white, .bg-white {
-  background-color: white; }
+  background-color: #ffffff; }
 
 .bg-gray-1 {
-  background-color: #e8e8e8; }
+  background-color: #E8E8E8; }
 
 .bg-gray-2 {
-  background-color: #3e3432; }
+  background-color: #3E3432; }
 
 .bg-gray-3 {
-  background-color: #261f1e; }
+  background-color: #261F1E; }
 
 .clean-link a {
   text-decoration: none; }
@@ -814,27 +1017,27 @@ body {
 .border {
   border-style: solid;
   border-width: 1px;
-  border-color: #cccccc; }
+  border-color: #ccc; }
 
 .border-top {
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: #cccccc; }
+  border-top-color: #ccc; }
 
 .border-right {
   border-right-style: solid;
   border-right-width: 1px;
-  border-right-color: #cccccc; }
+  border-right-color: #ccc; }
 
 .border-bottom {
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: #cccccc; }
+  border-bottom-color: #ccc; }
 
 .border-left {
   border-left-style: solid;
   border-left-width: 1px;
-  border-left-color: #cccccc; }
+  border-left-color: #ccc; }
 
 .rounded {
   border-radius: 0; }
@@ -871,7 +1074,7 @@ button,
 .form-light .select {
   background-color: white;
   transition: box-shadow .2s ease;
-  border-color: #cccccc;
+  border-color: #ccc;
   border-radius: 0; }
   .form-light .input:focus,
   .form-light .textarea:focus,
@@ -885,11 +1088,59 @@ button,
   .form-light .radio input:focus,
   .form-light .checkbox input:focus {
     outline: none;
-    box-shadow: 0 0 0 2px white, 0 0 1px 4px rgba(59, 0, 204, 0.5); }
+    box-shadow: 0 0 0 2px #fff, 0 0 1px 4px rgba(59, 0, 204, 0.5); }
 .form-light .radio input {
   border-radius: 50%; }
 .form-light .fieldset {
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: #ccc;
   border-radius: 0; }
+
+/**
+ * Flag object.
+ *
+ * Very similar to the media object, only the flag object allows for vertical alignment.
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ http://jsfiddle.net/csswizardry/herrh/
+ */
+.flag {
+  display: table;
+  width: 100%; }
+
+.flag-button {
+  display: table;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.flag-image,
+.flag-body {
+  display: table-cell;
+  vertical-align: middle; }
+  .flag-top .flag-image, .flag-top
+  .flag-body {
+    vertical-align: top; }
+  .flag-bottom .flag-image, .flag-bottom
+  .flag-body {
+    vertical-align: bottom; }
+  .flag-button-text .flag-image, .flag-button-text
+  .flag-body {
+    text-align: right; }
+  .flag-button-icon .flag-image, .flag-button-icon
+  .flag-body {
+    max-width: 100% !important; }
+
+.flag-image {
+  padding-right: 10px; }
+  .flag-image > img {
+    display: block;
+    max-width: none; }
+  .flag-rev .flag-image {
+    padding-right: 0;
+    padding-left: 10px; }
+
+.flag-body {
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

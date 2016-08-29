@@ -1,3 +1,268 @@
+//Overridden Variables
+
+$monospace-font-family: 'Cousine', monospace;
+
+
+.mono {
+  font-weight: 400;
+  font-family: $monospace-font-family;
+}
+
+.mono-bold {
+  font-family: $monospace-font-family;
+  font-weight: 700 !important;
+  letter-spacing: .15em;
+  padding-top: 4px;
+}
+
 body {
   background: #000000;
+  color: #ffffff;
+}
+
+.top-nav {
+  li {
+    display: inline;
+    list-style-type: none;
+    padding-left: 5px;
+  }
+  padding-top: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+  position: fixed;
+  top: 0;
+}
+
+.bottom-nav {
+  width: 100%;
+  text-align: center;
+  li {
+    display: inline;
+    list-style-type: none;
+  }
+  position: fixed;
+  bottom: 0;
+}
+
+
+.intro-button {
+  background-color: #5c00ff;
+  padding: 6px 10px 6px 10px;
+
+
+}
+
+.project-intro {
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+
+// Layout
+.content {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.project {
+  padding-bottom: 10%;
+}
+
+.project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split {
+  padding-bottom: 100px;
+  width: (12/12 * 100%);
+  float: left;
+  box-sizing: border-box;
+}
+
+.project-image-left {
+  img {
+    width: (6/12 * 100%);
+    height: 100%;
+  }
+  & .caption {
+      padding-left: 5%;
+      padding-right: 10%;
+      padding-top: 0;
+      width: (4/12 * 100%);
+      float: right;
+      h6 {
+        padding-top: 0px;
+        padding-bottom: 20px;
+      }
+  }
+}
+
+.project-image-right{
+  img {
+    width: (6/12 * 100%);
+    height: 100%;
+    float: right;
+  }
+  & .caption {
+      padding-right: 10%;
+      padding-top: 0;
+      width: (4/12 * 100%);
+      h6 {
+        padding-top: 0px;
+        padding-bottom: 20px;
+      }
+  }
+}
+
+.project-image-full {
+  img {
+    width: (12/12 * 100%);
+    height: 100%;
+  }
+  & .caption {
+      width: 50%;
+      h6 {
+        padding-top: 20px;
+      }
+      h4 {
+        padding-top: 10px;
+      }
+  }
+}
+
+.caption-right {
+  padding-left: 50%;
+
+}
+
+.caption {
+  h6 {
+    font-weight: 400;
+    font-family: $monospace-font-family;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+
+.caption {
+  padding-left: 5%;
+}
+
+.project-image-left, .project-image-right {
+  img {
+    width: 100%;
+  }
+  & .caption {
+      float: right;
+      width: 70%;
+      padding-right: 10%;
+      padding-left: 10%;
+      padding-top: 0;
+      h6 {
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+  }
+}
+
+.project-image-full {
+  & .caption {
+      width: 90%;
+      padding-left: 5%;
+      padding-right: 5%;
+      h6 {
+        padding-top: 20px;
+      }
+      h4 {
+        padding-top: 10px;
+        width: 100%;
+      }
+  }
+}
+
+.caption-right {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+}
+
+// Phone Breakpoint
+@media screen and (max-width: $breakpoint-sm) {
+.content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.project-description {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+  .role-headline, .role-content, .project-headline, .project-content {
+    padding-top: 20px !important;
+  }
+
+  .flag-button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .intro {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+
+  .flag-button {
+    float: right;
+  }
+
+}
+
+/**
+ * VH and VW units can cause issues on iOS devices: http://caniuse.com/#feat=viewport-units
+ *
+ * To overcome this, create media queries that target the width, height, and orientation of iOS devices.
+ * It isn't optimal, but there is really no other way to solve the problem. In this example, I am fixing
+ * the height of element `.foo` —which is a full width and height cover image.
+ *
+ * iOS Resolution Quick Reference: http://www.iosres.com/
+ */
+
+$intro-padding: .25;
+
+.intro {
+  padding-top: 100vh*$intro-padding;
+  padding-bottom: 100vh*$intro-padding;
+}
+
+/**
+ * iPad with portrait orientation.
+*/
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  .intro {
+    padding-top: 1024px*$intro-padding;
+    padding-bottom: 1024px*$intro-padding;
+  }
+}
+
+/**
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  .intro {
+    padding-top: 768px*$intro-padding;
+    padding-bottom: 768px*$intro-padding;
+  }
+}
+
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40/71) {
+  .intro {
+    padding-top: 500px*$intro-padding;
+    padding-bottom: 500px*$intro-padding;
+  }
 }
