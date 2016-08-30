@@ -98,7 +98,7 @@
 
   .sm-col-12 {
     width: 100%; } }
-@media screen and (min-width: 52em) {
+@media screen and (min-width: 40.1em) {
   .md-col {
     float: left;
     box-sizing: border-box; }
@@ -752,9 +752,79 @@ body {
 .clear-link a {
   border-bottom: 0; }
 
+.flip-text {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); }
+
+.new-description .details {
+  width: 35%;
+  float: left; }
+  .new-description .details h4 {
+    text-align: left; }
+  .new-description .details h6 {
+    float: left;
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding-right: 10%;
+    padding-bottom: 60px; }
+.new-description .view-project {
+  float: right; }
+
+@media screen and (max-width: 40em) {
+  .new-description {
+    padding-left: 5%;
+    padding-right: 5%; }
+    .new-description .details {
+      width: 100%;
+      padding-bottom: 5%; }
+      .new-description .details h4 {
+        padding-left: 50%; } }
+.project-container {
+  width: 100%;
+  /* pick whatever width you want */
+  padding-bottom: 2%; }
+
+.project-container .project-outer {
+  width: 100%;
+  padding-top: 45%;
+  /* defines aspect ratio */
+  position: relative; }
+
+.project-container .project-outer .project-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.project-block {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .project-block a.project-slide-link {
+    position: absolute;
+    max-width: 100%;
+    height: 800px;
+    display: block;
+    z-index: 10; }
+  .project-block a.project-slide-link:hover {
+    background-position: center -150px; }
+  .project-block .slide {
+    width: 100vw;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover; }
+
 .slides {
   z-index: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  margin-top: -25px; }
 
 .slides.active {
   visibility: visible; }
@@ -927,6 +997,13 @@ li {
   .caption-right {
     padding-left: 0;
     padding-right: 20px; } }
+@media screen and (min-width: 40.1em) and (max-width: 64em) {
+  .role-headline, .role-content, .project-headline, .project-content {
+    padding-top: 20px !important; }
+
+  .flag-button {
+    padding-top: 20px;
+    padding-bottom: 20px; } }
 @media screen and (max-width: 40em) {
   .content {
     padding-left: 0;

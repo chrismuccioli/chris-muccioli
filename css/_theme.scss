@@ -27,13 +27,111 @@ body {
   }
 }
 
+.flip-text {
+  -webkit-transform:rotate(-180deg);
+-moz-transform:rotate(-180deg);
+-o-transform:rotate(-180deg);
+transform:rotate(-180deg);
+ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+
+//New Project Description On Homepage
+
+.new-description {
+  & .details {
+    width: 35%;
+    float: left;
+    h4 {
+      text-align: left;
+
+    }
+    h6 {
+      float: left;
+      font-family: $monospace-font-family;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding-right: 10%;
+      padding-bottom: 60px;
+    }
+  }
+  & .view-project {
+    float: right;
+  }
+
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+.new-description {
+  padding-left: 5%;
+  padding-right: 5%;
+  & .details {
+    width: 100%;
+    padding-bottom: 5%;
+    h6 {
+
+    }
+    h4 {
+      padding-left: 50%;
+    }
+  }
+}
+
+}
+
+//Start Slides
+
+
+.project-container { 
+    width: 100%; /* pick whatever width you want */
+    padding-bottom: 2%;
+}
+.project-container .project-outer {
+    width: 100%;
+    padding-top: 45%; /* defines aspect ratio */
+    position: relative;
+}
+.project-container .project-outer .project-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.project-block {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    a.project-slide-link {
+    position:absolute;
+    max-width: 100%;
+    height: 800px;
+    display: block;
+    z-index: 10;
+    }
+    a.project-slide-link:hover{
+    background-position: center -150px;
+  }
+    & .slide {
+      width: 100vw;
+      height: 800px;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+    }
+}
 .slides{
-  z-index:0;
-  visibility: hidden;
+    z-index:0;
+    visibility:hidden;
+    margin-top: -25px;
 }
 .slides.active{
-  visibility: visible;
+    visibility:visible;
 }
+
+//End Slides
 
 a {
   color: #ffffff;
@@ -269,6 +367,16 @@ li {
   padding-right: 20px;
 }
 
+}
+
+@media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .role-headline, .role-content, .project-headline, .project-content {
+      padding-top: 20px !important;
+    }
+  .flag-button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 // Phone Breakpoint
