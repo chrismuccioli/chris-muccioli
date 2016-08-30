@@ -12,7 +12,6 @@ h5,
 h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
-  line-height: $heading-line-height;
   text-rendering: optimizeLegibility;
   // margin-top: 1em;
   // margin-bottom: .5em;
@@ -24,7 +23,9 @@ ol,
 ul {
   font-size: $h4;
   margin-top: 0;
+  letter-spacing: $h4-ls;
   margin-bottom: $space-2;
+  font-weight: $heading-font-weight;
 }
 
 ol,
@@ -68,36 +69,42 @@ h1,
 .h1 {
   font-size: $h1;
   letter-spacing: $h1-ls;
+  line-height: $h1-lh;
 }
 
 h2,
 .h2 {
   font-size: $h2;
   letter-spacing: $h2-ls;
+  line-height: $h2-lh;
 }
 
 h3,
 .h3 {
   font-size: $h3;
   letter-spacing: $h3-ls;
+  line-height: $h3-lh;
 }
 
 h4,
 .h4 {
   font-size: $h4;
   letter-spacing: $h4-ls;
+  line-height: $h4-lh;
 }
 
 h5,
 .h5 {
   font-size: $h5;
   letter-spacing: $h5-ls;
+  line-height: $h5-lh;
 }
 
 h6,
 .h6 {
   font-size: $h6;
   letter-spacing: $h6-ls;
+  line-height: $h6-lh;
 }
 
 .list-reset {

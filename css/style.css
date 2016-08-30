@@ -220,7 +220,6 @@ h5,
 h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
-  line-height: 1.25;
   text-rendering: optimizeLegibility; }
 
 p,
@@ -229,7 +228,9 @@ ol,
 ul {
   font-size: 16px;
   margin-top: 0;
-  margin-bottom: 1rem; }
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  font-weight: 100; }
 
 ol,
 ul {
@@ -238,7 +239,7 @@ ul {
 pre,
 code,
 samp {
-  font-family: "Source Code Pro", Consolas, monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: inherit; }
 
 pre {
@@ -265,39 +266,45 @@ blockquote p {
 h1,
 .h1 {
   font-size: 32px;
-  letter-spacing: 0px; }
+  letter-spacing: 0.07em;
+  line-height: 1.25em; }
 
 h2,
 .h2 {
   font-size: 24px;
-  letter-spacing: 0.06em; }
+  letter-spacing: 0.06em;
+  line-height: 1.45em; }
 
 h3,
 .h3 {
   font-size: 18px;
-  letter-spacing: 0px; }
+  letter-spacing: 0px;
+  line-height: 1.25em; }
 
 h4,
 .h4 {
   font-size: 16px;
-  letter-spacing: 0.12em; }
+  letter-spacing: 0.12em;
+  line-height: 1.42em; }
 
 h5,
 .h5 {
   font-size: 12px;
-  letter-spacing: 0px; }
+  letter-spacing: 0px;
+  line-height: 1.25em; }
 
 h6,
 .h6 {
   font-size: 10px;
-  letter-spacing: 0.06em; }
+  letter-spacing: 0.3em;
+  line-height: 1.25em; }
 
 .list-reset {
   list-style: none;
   padding-left: 0; }
 
 .mono {
-  font-family: "Source Code Pro", Consolas, monospace;
+  font-family: "Roboto Mono", monospace;
   letter-spacing: 0.15em; }
 
 .bold {
@@ -729,12 +736,12 @@ textarea {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
 
 .mono {
-  font-weight: 400;
-  font-family: "Cousine", monospace; }
+  font-weight: 100;
+  font-family: "Roboto Mono", monospace; }
 
 .mono-bold {
-  font-family: "Cousine", monospace;
-  font-weight: 700 !important;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 100 !important;
   letter-spacing: .15em;
   padding-top: 4px; }
 
@@ -742,33 +749,76 @@ body {
   background: #000000;
   color: #ffffff; }
 
+.clear-link a {
+  border-bottom: 0; }
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px white solid;
+  padding-bottom: 2.5px; }
+
+a:hover {
+  color: #ff0022; }
+
+li {
+  padding-bottom: 10px; }
+
 .top-nav {
-  padding-top: 5%;
-  padding-left: 8%;
-  padding-right: 8%;
-  position: fixed;
-  top: 0; }
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  top: 0;
+  position: fixed; }
   .top-nav li {
     display: inline;
     list-style-type: none;
     padding-left: 5px; }
 
 .bottom-nav {
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  bottom: 0; }
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  bottom: 0;
+  position: fixed; }
   .bottom-nav li {
+    display: inline;
+    list-style-type: none;
+    padding-left: 5px; }
+
+.project-footer {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
+.project-nav {
+  text-align: center; }
+  .project-nav li {
     display: inline;
     list-style-type: none; }
 
-.intro-button {
-  background-color: #5c00ff;
-  padding: 6px 10px 6px 10px; }
-
 .project-intro {
-  padding-top: 300px;
-  padding-bottom: 300px; }
+  padding-top: 15%;
+  padding-bottom: 10%;
+  width: 100%; }
+  .project-intro .caption {
+    padding-bottom: 20px;
+    padding-left: 1%;
+    padding-right: 1%; }
+    .project-intro .caption h6 {
+      padding-bottom: 10px; }
+
+.project-footer-content {
+  width: 33.33333%;
+  float: left; }
+  .project-footer-content li {
+    list-style-type: none; }
+  .project-footer-content ul {
+    padding-left: 0; }
+  .project-footer-content h6 {
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding-bottom: 10px; }
 
 .content {
   padding-left: 10%;
@@ -777,7 +827,7 @@ body {
 .project {
   padding-bottom: 10%; }
 
-.project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split {
+.project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split, .project-footer {
   padding-bottom: 100px;
   width: 100%;
   float: left;
@@ -794,7 +844,7 @@ body {
   float: right; }
   .project-image-left .caption h6 {
     padding-top: 0px;
-    padding-bottom: 20px; }
+    padding-bottom: 10px; }
 
 .project-image-right img {
   width: 50%;
@@ -806,7 +856,7 @@ body {
   width: 33.33333%; }
   .project-image-right .caption h6 {
     padding-top: 0px;
-    padding-bottom: 20px; }
+    padding-bottom: 10px; }
 
 .project-image-full img {
   width: 100%;
@@ -822,13 +872,24 @@ body {
   padding-left: 50%; }
 
 .caption h6 {
-  font-weight: 400;
-  font-family: "Cousine", monospace;
+  font-family: "Roboto Mono", monospace;
   text-transform: uppercase; }
 
 @media screen and (max-width: 40em) {
+  .bottom-nav, .top-nav {
+    padding: 5%; }
+
   .caption {
     padding-left: 5%; }
+
+  .project-intro {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 20%; }
+    .project-intro .caption {
+      padding-bottom: 20px; }
+      .project-intro .caption h6 {
+        padding-bottom: 10px; }
 
   .project-image-left img, .project-image-right img {
     width: 100%; }
@@ -851,6 +912,10 @@ body {
     .project-image-full .caption h4 {
       padding-top: 10px;
       width: 100%; }
+
+  .project-footer-content {
+    text-align: center;
+    width: 100%; }
 
   .caption-right {
     padding-left: 0;

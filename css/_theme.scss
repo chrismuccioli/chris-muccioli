@@ -1,16 +1,17 @@
 //Overridden Variables
 
-$monospace-font-family: 'Cousine', monospace;
+$monospace-font-family: 'Roboto Mono', monospace;
 
+// Homepage
 
 .mono {
-  font-weight: 400;
+  font-weight: 100;
   font-family: $monospace-font-family;
 }
 
 .mono-bold {
   font-family: $monospace-font-family;
-  font-weight: 700 !important;
+  font-weight: 100 !important;
   letter-spacing: .15em;
   padding-top: 4px;
 }
@@ -20,41 +21,98 @@ body {
   color: #ffffff;
 }
 
+.clear-link {
+  a {
+  border-bottom: 0;
+  }
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px white solid;
+  padding-bottom: 2.5px;
+}
+
+a:hover {
+    color: #ff0022;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
 .top-nav {
   li {
     display: inline;
     list-style-type: none;
     padding-left: 5px;
   }
-  padding-top: 5%;
-  padding-left: 8%;
-  padding-right: 8%;
-  position: fixed;
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
   top: 0;
+  position: fixed;
 }
 
-.bottom-nav {
-  width: 100%;
+ .bottom-nav {
+  li {
+    display: inline;
+    list-style-type: none;
+    padding-left: 5px;
+  }
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  bottom: 0;
+  position: fixed;
+ }
+
+.project-footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.project-nav {
   text-align: center;
   li {
     display: inline;
     list-style-type: none;
   }
-  position: fixed;
-  bottom: 0;
+  // position: fixed;
 }
 
-
-.intro-button {
-  background-color: #5c00ff;
-  padding: 6px 10px 6px 10px;
-
-
-}
+// Project Page
 
 .project-intro {
-  padding-top: 300px;
-  padding-bottom: 300px;
+  padding-top: 15%;
+  padding-bottom: 10%;
+  width: 100%;
+  & .caption {
+    h6 {
+      padding-bottom: 10px;
+    }
+    padding-bottom: 20px;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+
+.project-footer-content {
+  li {
+    list-style-type: none;
+  }
+  ul {
+    padding-left: 0;
+  }
+  width: (4/12 * 100%);
+  float: left;
+  h6 {
+  font-family: $monospace-font-family;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  }
 }
 
 // Layout
@@ -67,7 +125,9 @@ body {
   padding-bottom: 10%;
 }
 
-.project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split {
+
+
+.project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split, .project-footer {
   padding-bottom: 100px;
   width: (12/12 * 100%);
   float: left;
@@ -87,12 +147,12 @@ body {
       float: right;
       h6 {
         padding-top: 0px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
       }
   }
 }
 
-.project-image-right{
+.project-image-right {
   img {
     width: (6/12 * 100%);
     height: 100%;
@@ -104,7 +164,7 @@ body {
       width: (4/12 * 100%);
       h6 {
         padding-top: 0px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
       }
   }
 }
@@ -132,7 +192,6 @@ body {
 
 .caption {
   h6 {
-    font-weight: 400;
     font-family: $monospace-font-family;
     text-transform: uppercase;
   }
@@ -140,8 +199,24 @@ body {
 
 @media screen and (max-width: $breakpoint-sm) {
 
+.bottom-nav, .top-nav {
+  padding: 5%;
+}
+
 .caption {
   padding-left: 5%;
+}
+
+.project-intro {
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 20%;
+  & .caption {
+    h6 {
+    padding-bottom: 10px;
+    }
+    padding-bottom: 20px;
+  }
 }
 
 .project-image-left, .project-image-right {
@@ -174,6 +249,11 @@ body {
         width: 100%;
       }
   }
+}
+
+.project-footer-content {
+  text-align: center;
+  width: 100%;
 }
 
 .caption-right {
