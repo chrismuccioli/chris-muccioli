@@ -1,0 +1,27 @@
+{% include head.html %}
+	<body>
+		{% include _nav-bar.html %}
+		{{ content }}
+		{% include _footer.html %}  
+	  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="http://malsup.github.com/jquery.cycle.all.js"></script>
+		<script type="text/javascript">
+		$(function(){
+
+		// Cycle plugin
+		$('.slides').cycle({
+		    fx:     'none',
+		    speed:   1,
+		    timeout: 70
+		}).cycle("pause");
+
+		// Pause & play on hover
+		$('.project-block').hover(function(){
+		    $(this).find('.slides').addClass('active').cycle('resume');
+		}, function(){
+		    $(this).find('.slides').removeClass('active').cycle('pause');
+		});
+		});
+		</script>
+	</body>
+</html>

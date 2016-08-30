@@ -13,26 +13,4 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="http://malsup.github.com/jquery.cycle.all.js"></script>
-  <script type="text/javascript">
-    $(function(){
-
-    // Cycle plugin
-    $('.slides').cycle({
-        fx:     'none',
-        speed:   1,
-        timeout: 70
-    }).cycle("pause");
-
-    // Pause & play on hover
-    $('.project-block').hover(function(){
-        $(this).find('.slides').addClass('active').cycle('resume');
-    }, function(){
-        $(this).find('.slides').removeClass('active').cycle('pause');
-    });
-
-});
-</script>
-
 </head>

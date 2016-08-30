@@ -735,6 +735,45 @@ textarea {
   /* Should be unset in IE9+ I think. */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
 
+.flip-text {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); }
+
+.clear-link a {
+  border-bottom: 0; }
+
+body {
+  background: #000000;
+  color: #ffffff; }
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px white solid;
+  padding-bottom: 2.5px; }
+
+a:hover {
+  color: #ff0022; }
+
+li {
+  padding-bottom: 10px; }
+
+.content {
+  padding-left: 10%;
+  padding-right: 10%; }
+
+.fuck-yeah-usa {
+  width: 100%;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 3%; }
+  .fuck-yeah-usa img {
+    height: 20px; }
+
 .mono {
   font-weight: 100;
   font-family: "Roboto Mono", monospace; }
@@ -745,49 +784,57 @@ textarea {
   letter-spacing: .15em;
   padding-top: 4px; }
 
-body {
-  background: #000000;
-  color: #ffffff; }
+.index-project {
+  float: left;
+  box-sizing: border-box;
+  width: 100%; }
 
-.clear-link a {
-  border-bottom: 0; }
-
-.flip-text {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-  ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); }
-
-.new-description .details {
-  width: 35%;
-  float: left; }
-  .new-description .details h4 {
-    text-align: left; }
-  .new-description .details h6 {
-    float: left;
-    font-family: "Roboto Mono", monospace;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    padding-right: 10%;
-    padding-bottom: 60px; }
-.new-description .view-project {
-  float: right; }
+.index-project-description {
+  padding-top: 1.3em; }
+  .index-project-description .details {
+    width: 35%;
+    float: left; }
+    .index-project-description .details h4 {
+      text-align: left; }
+    .index-project-description .details h6 {
+      float: left;
+      font-family: "Roboto Mono", monospace;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding-right: 10%;
+      padding-bottom: 60px;
+      padding-top: 0.4em; }
+  .index-project-description .view-project {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .index-project-description .view-project h6 {
+      float: left;
+      font-family: "Roboto Mono", monospace;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding-right: 15px; }
+    .index-project-description .view-project .long-arrow-right {
+      float: right; }
 
 @media screen and (max-width: 40em) {
-  .new-description {
+  .index-project-description {
     padding-left: 5%;
     padding-right: 5%; }
-    .new-description .details {
+    .index-project-description .details {
+      width: 100%; }
+      .index-project-description .details h6 {
+        padding-bottom: 3em; }
+      .index-project-description .details h4 {
+        padding-left: 50%; }
+    .index-project-description .view-project {
       width: 100%;
-      padding-bottom: 5%; }
-      .new-description .details h4 {
-        padding-left: 50%; } }
+      padding-top: 1.5em;
+      padding-bottom: 3em; } }
+/****  Cycle Project Index Image ****/
 .project-container {
-  width: 100%;
-  /* pick whatever width you want */
-  padding-bottom: 2%; }
+  width: 100%; }
 
 .project-container .project-outer {
   width: 100%;
@@ -810,8 +857,7 @@ body {
     position: absolute;
     max-width: 100%;
     height: 800px;
-    display: block;
-    z-index: 10; }
+    display: block; }
   .project-block a.project-slide-link:hover {
     background-position: center -150px; }
   .project-block .slide {
@@ -822,46 +868,38 @@ body {
     background-size: cover; }
 
 .slides {
-  z-index: 0;
   visibility: hidden;
   margin-top: -25px; }
 
 .slides.active {
   visibility: visible; }
 
-a {
-  color: #ffffff;
-  text-decoration: none;
-  border-bottom: 1px white solid;
-  padding-bottom: 2.5px; }
-
-a:hover {
-  color: #ff0022; }
-
-li {
-  padding-bottom: 10px; }
+.top-nav, .bottom-nav {
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  z-index: 100; }
+  .top-nav li, .bottom-nav li {
+    display: inline;
+    list-style-type: none;
+    padding-left: 5px; }
+  .top-nav h4, .bottom-nav h4 {
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: .15em;
+    text-transform: uppercase; }
 
 .top-nav {
   padding-top: 2%;
   padding-left: 3%;
   padding-right: 3%;
-  top: 0;
-  position: fixed; }
-  .top-nav li {
-    display: inline;
-    list-style-type: none;
-    padding-left: 5px; }
+  top: 0; }
 
 .bottom-nav {
   padding-bottom: 2%;
   padding-left: 3%;
   padding-right: 3%;
-  bottom: 0;
-  position: fixed; }
-  .bottom-nav li {
-    display: inline;
-    list-style-type: none;
-    padding-left: 5px; }
+  bottom: 0; }
 
 .project-footer {
   padding-top: 2em;
@@ -896,13 +934,6 @@ li {
     letter-spacing: .15em;
     text-transform: uppercase;
     padding-bottom: 10px; }
-
-.content {
-  padding-left: 10%;
-  padding-right: 10%; }
-
-.project {
-  padding-bottom: 10%; }
 
 .project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split, .project-footer {
   padding-bottom: 100px;
@@ -1008,17 +1039,6 @@ li {
   .content {
     padding-left: 0;
     padding-right: 0; }
-
-  .project-description {
-    padding-left: 20px;
-    padding-right: 20px; }
-
-  .role-headline, .role-content, .project-headline, .project-content {
-    padding-top: 20px !important; }
-
-  .flag-button {
-    padding-top: 20px;
-    padding-bottom: 20px; }
 
   .intro {
     padding-left: 20px;
