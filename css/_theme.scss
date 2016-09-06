@@ -220,20 +220,6 @@ li {
     bottom: 0;
   }
 
-.project-footer {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.project-nav {
-  text-align: center;
-  li {
-    display: inline;
-    list-style-type: none;
-  }
-  // position: fixed;
-}
-
 // Project Page
 
 $caption-padding: .25%;
@@ -259,7 +245,7 @@ $caption-padding: .25%;
   ul {
     padding-left: 0;
   }
-  width: (5/12 * 100%);
+  width: (4/12 * 100%);
   float: left;
   h6 {
   font-family: $monospace-font-family;
@@ -268,6 +254,34 @@ $caption-padding: .25%;
   padding-bottom: 10px;
   }
 }
+
+.project-footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.project-nav {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 100%;
+  li {
+    list-style-type: none;
+  }
+  ul {
+    padding-left: 0;
+  }
+  h4 {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-family: $monospace-font-family;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split, .project-footer {
   padding-bottom: 30px;
@@ -347,9 +361,20 @@ $caption-padding: .25%;
     font-family: $monospace-font-family;
     text-transform: uppercase;
   }
+  padding-bottom: ($caption-padding * 6);
 }
 
 @media screen and (max-width: $breakpoint-sm) {
+
+
+.project-footer-content {
+  text-align: center;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 
 .bottom-nav, .top-nav {
   padding: 5%;
@@ -357,6 +382,7 @@ $caption-padding: .25%;
 
 .caption {
   padding-left: 5%;
+  padding-bottom: 5%
 }
 
 .project-intro {
@@ -403,10 +429,6 @@ $caption-padding: .25%;
   }
 }
 
-.project-footer-content {
-  text-align: center;
-  width: 100%;
-}
 
 .caption-right {
   padding-left: 0;
