@@ -351,6 +351,9 @@ $project-padding: 1.5em;
   display: flex;
   width: 100%;
   padding-bottom: $project-padding;
+  img {
+    width: 100%;
+  }
   & .bottom {
     align-items: center;
     margin-top: auto;
@@ -368,8 +371,47 @@ $project-padding: 1.5em;
   }
   & .flex-caption {
     width: 50%;
+    padding-bottom: $project-padding;
   }
 }
+
+.flex-image-full {
+  flex-flow: row wrap;
+  & .flex-caption {
+    padding-top: $project-padding;
+  }
+}
+
+.caption, .flex-caption {
+  h6 {
+    font-family: $monospace-font-family;
+    text-transform: uppercase;
+    padding-bottom: ($project-padding * .5);
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+ .flex-image {
+  flex-flow: row wrap;
+  & .flex-image-left {
+    width: 100%;
+    padding-right: 0;
+  }
+  & .right {
+      text-align: left;
+  }
+  & .flex-image-right {
+    width: 100%;
+    padding-left: 0;
+  }
+  & .flex-caption {
+    width: 90%;
+    padding: $project-padding;
+  }
+ }
+
+}
+
 
 
 .project-image-right {
@@ -426,12 +468,7 @@ $project-padding: 1.5em;
 //     justify-content: center;
 // }
 
-.caption, .flex-caption {
-  h6 {
-    font-family: $monospace-font-family;
-    text-transform: uppercase;
-  }
-}
+
 
 @media screen and (max-width: $breakpoint-sm) {
 
