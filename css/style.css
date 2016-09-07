@@ -966,6 +966,24 @@ li {
     padding-top: 0px;
     padding-bottom: 10px; }
 
+.flex-image {
+  display: flex;
+  width: 100%;
+  padding-bottom: 1.5em; }
+  .flex-image .bottom {
+    align-items: center;
+    margin-top: auto; }
+  .flex-image .right {
+    text-align: right; }
+  .flex-image .flex-image-left {
+    width: 50%;
+    padding-right: 1.5em; }
+  .flex-image .flex-image-right {
+    width: 50%;
+    padding-left: 1.5em; }
+  .flex-image .flex-caption {
+    width: 50%; }
+
 .project-image-right img {
   width: 50%;
   height: 100%;
@@ -998,11 +1016,9 @@ li {
   padding-left: 25%;
   padding-right: 25%; }
 
-.caption {
-  padding-bottom: 1.5%; }
-  .caption h6 {
-    font-family: "Roboto Mono", monospace;
-    text-transform: uppercase; }
+.caption h6, .flex-caption h6 {
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase; }
 
 @media screen and (max-width: 40em) {
   .project-footer-content {

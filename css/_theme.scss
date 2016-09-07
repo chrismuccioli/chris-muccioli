@@ -2,6 +2,40 @@
 
 $monospace-font-family: 'Roboto Mono', monospace;
 
+// .project-image {
+//   display: flex;
+//   align-items: center;
+//   justify-content: bottom;
+//   padding-bottom: 30px;
+//   width: (12/12 * 100%);
+//   box-sizing: border-box;
+//   & .caption-bottom {
+//     margin-top: auto;
+//   }
+// }
+
+// .project-image-left, .project-image-full, .project-image-right, .project-image-split, .project-footer {
+//   float: left;
+// }
+
+// .project-image-left {
+//   img {
+//     width: (6/12 * 100%);
+//     height: 100%;
+//   }
+//   & .caption {
+//       padding-left: $caption-padding;
+//       padding-right: $caption-padding;
+//       padding-top: 0;
+//       width: (5.65/12 * 100%);
+//       float: right;
+//       h6 {
+//         padding-top: 0px;
+//         padding-bottom: 10px;
+//       }
+//   }
+// }
+
 
 //Utilities
 
@@ -308,6 +342,36 @@ $caption-padding: .25%;
   }
 }
 
+
+//Flex Box
+
+$project-padding: 1.5em;
+
+.flex-image {
+  display: flex;
+  width: 100%;
+  padding-bottom: $project-padding;
+  & .bottom {
+    align-items: center;
+    margin-top: auto;
+  }
+  & .right {
+      text-align: right;
+  }
+  & .flex-image-left {
+    width: 50%;
+    padding-right: $project-padding;
+  }
+  & .flex-image-right {
+    width: 50%;
+    padding-left: $project-padding;
+  }
+  & .flex-caption {
+    width: 50%;
+  }
+}
+
+
 .project-image-right {
   img {
     width: (6/12 * 100%);
@@ -362,12 +426,11 @@ $caption-padding: .25%;
 //     justify-content: center;
 // }
 
-.caption {
+.caption, .flex-caption {
   h6 {
     font-family: $monospace-font-family;
     text-transform: uppercase;
   }
-  padding-bottom: ($caption-padding * 6);
 }
 
 @media screen and (max-width: $breakpoint-sm) {
