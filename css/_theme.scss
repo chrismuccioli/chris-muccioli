@@ -2,40 +2,10 @@
 
 $monospace-font-family: 'Roboto Mono', monospace;
 
-// .project-image {
-//   display: flex;
-//   align-items: center;
-//   justify-content: bottom;
-//   padding-bottom: 30px;
-//   width: (12/12 * 100%);
-//   box-sizing: border-box;
-//   & .caption-bottom {
-//     margin-top: auto;
-//   }
-// }
 
-// .project-image-left, .project-image-full, .project-image-right, .project-image-split, .project-footer {
-//   float: left;
-// }
-
-// .project-image-left {
-//   img {
-//     width: (6/12 * 100%);
-//     height: 100%;
-//   }
-//   & .caption {
-//       padding-left: $caption-padding;
-//       padding-right: $caption-padding;
-//       padding-top: 0;
-//       width: (5.65/12 * 100%);
-//       float: right;
-//       h6 {
-//         padding-top: 0px;
-//         padding-bottom: 10px;
-//       }
-//   }
-// }
-
+.project-footer {
+  float: left;
+}
 
 //Utilities
 
@@ -317,37 +287,16 @@ $caption-padding: .25%;
 }
 
 
-.project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split, .project-footer {
+.project-footer {
   padding-bottom: 30px;
   width: (12/12 * 100%);
   float: left;
   box-sizing: border-box;
 }
 
-.project-image-left {
-  img {
-    width: (6/12 * 100%);
-    height: 100%;
-  }
-  & .caption {
-      padding-left: $caption-padding;
-      padding-right: $caption-padding;
-      padding-top: 0;
-      width: (5.65/12 * 100%);
-      float: right;
-      h6 {
-        padding-top: 0px;
-        padding-bottom: 10px;
-      }
-  }
-}
-
-
-//Flex Box
-
 $project-padding: 1.5em;
 
-.flex-image {
+.project-image {
   display: flex;
   width: 100%;
   padding-bottom: $project-padding;
@@ -357,32 +306,33 @@ $project-padding: 1.5em;
   & .bottom {
     align-items: center;
     margin-top: auto;
+    padding-bottom: 0 !important;
   }
   & .right {
       text-align: right;
   }
-  & .flex-image-left {
+  & .project-image-left {
     width: 50%;
     padding-right: $project-padding;
   }
-  & .flex-image-right {
+  & .project-image-right {
     width: 50%;
     padding-left: $project-padding;
   }
-  & .flex-caption {
+  & .project-caption, .caption {
     width: 50%;
     padding-bottom: $project-padding;
   }
 }
 
-.flex-image-full {
+.project-image-full {
   flex-flow: row wrap;
-  & .flex-caption {
+  & .project-caption, .caption {
     padding-top: $project-padding;
   }
 }
 
-.caption, .flex-caption {
+.caption, .project-caption {
   h6 {
     font-family: $monospace-font-family;
     text-transform: uppercase;
@@ -391,83 +341,26 @@ $project-padding: 1.5em;
 }
 
 @media screen and (max-width: $breakpoint-sm) {
- .flex-image {
+ .project-image {
   flex-flow: row wrap;
-  & .flex-image-left {
+  & .project-image-left {
     width: 100%;
     padding-right: 0;
   }
   & .right {
       text-align: left;
   }
-  & .flex-image-right {
+  & .project-image-right {
     width: 100%;
     padding-left: 0;
   }
-  & .flex-caption {
+  & .project-caption, .caption {
     width: 90%;
     padding: $project-padding;
   }
  }
 
 }
-
-
-
-.project-image-right {
-  img {
-    width: (6/12 * 100%);
-    height: 100%;
-    float: right;
-  }
-  & .caption {
-      padding-right: $caption-padding;
-      padding-top: 0;
-      width: (5.65/12 * 100%);
-      h6 {
-        padding-top: 0px;
-        padding-bottom: 10px;
-      }
-  }
-}
-
-.project-image-full {
-  img {
-    width: (12/12 * 100%);
-    height: 100%;
-  }
-  & .caption {
-      width: 50%;
-      h6 {
-        padding-top: 20px;
-      }
-      h4 {
-        padding-top: 10px;
-      }
-  }
-}
-
-.caption-right {
-  padding-left: 50%;
-
-}
-
-.caption-left {
-  padding-right: 50%;
-
-}
-
-.caption-center {
-  padding-left: 25%;
-  padding-right: 25%;
-}
-
-// .caption-bottom {
-//     display: flex;
-//     align-items: bottom;
-//     justify-content: center;
-// }
-
 
 
 @media screen and (max-width: $breakpoint-sm) {
@@ -486,11 +379,6 @@ $project-padding: 1.5em;
   padding: 5%;
 }
 
-.caption {
-  padding-left: 5%;
-  padding-bottom: 5%
-}
-
 .project-intro {
   padding-left: 4%;
   padding-right: 4%;
@@ -501,56 +389,6 @@ $project-padding: 1.5em;
     }
     padding-bottom: 20px;
   }
-}
-
-.project-image-left, .project-image-right {
-  img {
-    width: 100%;
-  }
-  & .caption {
-      float: right;
-      width: 70%;
-      padding-right: 10%;
-      padding-left: 10%;
-      padding-top: 0;
-      h6 {
-        padding-top: 20px;
-        padding-bottom: 10px;
-      }
-  }
-}
-
-.project-image-full {
-  & .caption {
-      width: 90%;
-      padding-left: 5%;
-      padding-right: 5%;
-      h6 {
-        padding-top: 20px;
-      }
-      h4 {
-        padding-top: 10px;
-        width: 100%;
-      }
-  }
-}
-
-
-.caption-right {
-  padding-left: 0;
-  padding-right: 20px;
-}
-
-.caption-left {
-  padding-right: 0;
-  padding-right: 20px;
-
-}
-
-.caption-center {
-  padding-right: 20px;
-  padding-right: 20px;
-
 }
 
 }
