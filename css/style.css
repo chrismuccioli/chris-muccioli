@@ -735,6 +735,9 @@ textarea {
   /* Should be unset in IE9+ I think. */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
 
+.project-footer {
+  float: left; }
+
 .flip-text {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
@@ -947,102 +950,58 @@ li {
     letter-spacing: .15em;
     text-transform: uppercase; }
 
-.project-image, .project-image-left, .project-image-full, .project-image-right, .project-image-split, .project-footer {
+.project-footer {
   padding-bottom: 30px;
   width: 100%;
   float: left;
   box-sizing: border-box; }
 
-.project-image-left img {
-  width: 50%;
-  height: 100%; }
-.project-image-left .caption {
-  padding-left: 0.25%;
-  padding-right: 0.25%;
-  padding-top: 0;
-  width: 47.08333%;
-  float: right; }
-  .project-image-left .caption h6 {
-    padding-top: 0px;
-    padding-bottom: 10px; }
-
-.flex-image {
+.project-image {
   display: flex;
   width: 100%;
   padding-bottom: 1.5em; }
-  .flex-image img {
+  .project-image img {
     width: 100%; }
-  .flex-image .bottom {
+  .project-image .bottom {
     align-items: center;
-    margin-top: auto; }
-  .flex-image .right {
+    margin-top: auto;
+    padding-bottom: 0 !important; }
+  .project-image .right {
     text-align: right; }
-  .flex-image .flex-image-left {
+  .project-image .project-image-left {
     width: 50%;
     padding-right: 1.5em; }
-  .flex-image .flex-image-right {
+  .project-image .project-image-right {
     width: 50%;
     padding-left: 1.5em; }
-  .flex-image .flex-caption {
+  .project-image .project-caption, .project-image .caption {
     width: 50%;
     padding-bottom: 1.5em; }
 
-.flex-image-full {
+.project-image-full {
   flex-flow: row wrap; }
-  .flex-image-full .flex-caption {
+  .project-image-full .project-caption, .project-image-full .caption {
     padding-top: 1.5em; }
 
-.caption h6, .flex-caption h6 {
+.caption h6, .project-caption h6 {
   font-family: "Roboto Mono", monospace;
   text-transform: uppercase;
   padding-bottom: 0.75em; }
 
 @media screen and (max-width: 40em) {
-  .flex-image {
+  .project-image {
     flex-flow: row wrap; }
-    .flex-image .flex-image-left {
+    .project-image .project-image-left {
       width: 100%;
       padding-right: 0; }
-    .flex-image .right {
+    .project-image .right {
       text-align: left; }
-    .flex-image .flex-image-right {
+    .project-image .project-image-right {
       width: 100%;
       padding-left: 0; }
-    .flex-image .flex-caption {
+    .project-image .project-caption, .project-image .caption {
       width: 90%;
       padding: 1.5em; } }
-.project-image-right img {
-  width: 50%;
-  height: 100%;
-  float: right; }
-.project-image-right .caption {
-  padding-right: 0.25%;
-  padding-top: 0;
-  width: 47.08333%; }
-  .project-image-right .caption h6 {
-    padding-top: 0px;
-    padding-bottom: 10px; }
-
-.project-image-full img {
-  width: 100%;
-  height: 100%; }
-.project-image-full .caption {
-  width: 50%; }
-  .project-image-full .caption h6 {
-    padding-top: 20px; }
-  .project-image-full .caption h4 {
-    padding-top: 10px; }
-
-.caption-right {
-  padding-left: 50%; }
-
-.caption-left {
-  padding-right: 50%; }
-
-.caption-center {
-  padding-left: 25%;
-  padding-right: 25%; }
-
 @media screen and (max-width: 40em) {
   .project-footer-content {
     text-align: center;
@@ -1055,10 +1014,6 @@ li {
   .bottom-nav, .top-nav {
     padding: 5%; }
 
-  .caption {
-    padding-left: 5%;
-    padding-bottom: 5%; }
-
   .project-intro {
     padding-left: 4%;
     padding-right: 4%;
@@ -1066,41 +1021,7 @@ li {
     .project-intro .caption {
       padding-bottom: 20px; }
       .project-intro .caption h6 {
-        padding-bottom: 10px; }
-
-  .project-image-left img, .project-image-right img {
-    width: 100%; }
-  .project-image-left .caption, .project-image-right .caption {
-    float: right;
-    width: 70%;
-    padding-right: 10%;
-    padding-left: 10%;
-    padding-top: 0; }
-    .project-image-left .caption h6, .project-image-right .caption h6 {
-      padding-top: 20px;
-      padding-bottom: 10px; }
-
-  .project-image-full .caption {
-    width: 90%;
-    padding-left: 5%;
-    padding-right: 5%; }
-    .project-image-full .caption h6 {
-      padding-top: 20px; }
-    .project-image-full .caption h4 {
-      padding-top: 10px;
-      width: 100%; }
-
-  .caption-right {
-    padding-left: 0;
-    padding-right: 20px; }
-
-  .caption-left {
-    padding-right: 0;
-    padding-right: 20px; }
-
-  .caption-center {
-    padding-right: 20px;
-    padding-right: 20px; } }
+        padding-bottom: 10px; } }
 @media screen and (min-width: 40.1em) and (max-width: 64em) {
   .role-headline, .role-content, .project-headline, .project-content {
     padding-top: 20px !important; }
